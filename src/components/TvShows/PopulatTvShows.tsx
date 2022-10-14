@@ -15,11 +15,13 @@ const PopularTvShows = () => {
   return (
     <div className="grid grid-cols-10 gap-4">
       {popularTvShows.data.results.map((tvShow: any) => (
-        <div key={tvShow.id} className="border border-gray-50 rounded-lg">
+        <div
+          key={tvShow.id}
+          className="border border-gray-600 rounded-lg hover:shadow-sm hover:shadow-slate-50 hover:scale-105 cursor-pointer">
           <Link href={`tvshow/${tvShow.id}`} passHref>
             <div>
               <Image
-                className="rounded-lg"
+                className="rounded-t-lg"
                 src={`https://image.tmdb.org/t/p/w500/${tvShow.poster_path}`}
                 alt={tvShow?.name}
                 width={200}

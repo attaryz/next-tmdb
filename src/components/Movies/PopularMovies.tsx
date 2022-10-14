@@ -16,11 +16,13 @@ const PopularMovies = () => {
   return (
     <div className="grid grid-cols-10 gap-4">
       {popularMovies.data.results.map((movie: RootObject) => (
-        <div key={movie.id} className="border border-gray-50 rounded-lg">
+        <div
+          key={movie.id}
+          className="border border-gray-600 rounded-lg hover:shadow-sm hover:shadow-slate-50 hover:scale-105 cursor-pointer">
           <Link href={`movie/${movie.id}`} passHref>
             <div>
               <Image
-                className="rounded-lg"
+                className="rounded-t-lg"
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={movie?.title}
                 width={200}

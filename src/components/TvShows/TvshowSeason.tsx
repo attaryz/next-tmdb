@@ -18,7 +18,7 @@ const TvShowSeason = ({ seasonNumber, tvShowId, seasonData }: IProps) => {
     return <div>Loading...</div>
   }
   return (
-    <div className="p-2 flex flex-col gap-2">
+    <div className="py-2 flex flex-col gap-2">
       {/* {tvShowSeason.data.episodes.map((episode: any) => (
         <div key={episode.id}>
           <div className="w-2/4">
@@ -45,7 +45,7 @@ const TvShowSeason = ({ seasonNumber, tvShowId, seasonData }: IProps) => {
       </div>
       <div>
         <p className="capitalize text-sm">season overview:</p>
-        <p className="text-sm">{seasonData.overview}</p>
+        {/* <p className="text-sm">{seasonData.overview}</p> */}
       </div>
       <div className="flex flex-row items-center gap-2">
         <p className="capitalize text-sm">number of episodes:</p>

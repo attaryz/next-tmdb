@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   font-family: "Nunito", sans-serif;
-  background-color: #000;
+  background-color: #0c090d;
   color: white;
+  scroll-behavior: smooth;
 }
