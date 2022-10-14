@@ -2,8 +2,8 @@ import { useQuery } from "@tanstack/react-query"
 import type { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import PopularMovies from "src/components/PopularMovies"
-import PopularTvShows from "src/components/PopulatTvShows"
+import PopularMovies from "src/components/Movies/PopularMovies"
+import PopularTvShows from "src/components/TvShows/PopulatTvShows"
 import { fetchPopularMovies } from "src/functions/fetchPopularMovies"
 
 const Home: NextPage = () => {
