@@ -13,18 +13,24 @@ const PopularTvShows = () => {
     return <div>Loading ...</div>
   }
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-10 gap-4">
       {popularTvShows.data.results.map((tvShow: any) => (
-        <div key={tvShow.id}>
+        <div key={tvShow.id} className="border border-gray-50 rounded-lg">
           <Link href={`tvshow/${tvShow.id}`} passHref>
             <div>
               <Image
+                className="rounded-lg"
                 src={`https://image.tmdb.org/t/p/w500/${tvShow.poster_path}`}
                 alt={tvShow?.name}
-                width={500}
-                height={500}
+                width={200}
+                height={300}
               />
-              <h1>{tvShow.name}</h1>
+              <div className="p-2">
+                <p className="text-xs">{tvShow.name}</p>
+                <span className="text-xs text-yellow-500">
+                  {tvShow.vote_average}
+                </span>
+              </div>
             </div>
           </Link>
         </div>
