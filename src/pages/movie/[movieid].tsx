@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query"
 import Image from "next/image"
+import { useRouter } from "next/router"
 import { fetchMovieById } from "src/functions/fetchMovieById"
 import { RootObject } from "src/types/movieTypes"
 import { time_convert } from "src/utils/time_convert"
 
 export default function Movie() {
-  const movieId: string = "718930"
+  const router = useRouter()
+  const movieId: string = router.query.movieid as string
 
   const { data: movies, isLoading } = useQuery(["movie", movieId], () =>
     fetchMovieById(movieId)

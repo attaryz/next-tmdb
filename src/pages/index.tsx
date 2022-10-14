@@ -1,10 +1,22 @@
 import { useQuery } from "@tanstack/react-query"
 import type { NextPage } from "next"
+import Image from "next/image"
+import Link from "next/link"
+import PopularMovies from "src/components/PopularMovies"
+import PopularTvShows from "src/components/PopulatTvShows"
+import { fetchPopularMovies } from "src/functions/fetchPopularMovies"
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <h1>home</h1>
+    <div className="flex flex-col gap-4 mx-4 my-4">
+      <div className="flex flex-col gap-4 ">
+        <h1 className="text-3xl font-bold">Popular Movies</h1>
+        <PopularMovies />
+      </div>
+      <div className="flex flex-col gap-4 ">
+        <h1 className="text-3xl font-bold">Popular TvShows</h1>
+        <PopularTvShows />
+      </div>
     </div>
   )
 }

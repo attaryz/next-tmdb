@@ -1,10 +1,12 @@
 import { useQuery } from "@tanstack/react-query"
 import Image from "next/image"
+import { useRouter } from "next/router"
 import { fetchTvShowById } from "src/functions/fetchTvShowById"
-import { RootObject } from "src/types/tvshowTypes"
+import { RootObject } from "src/types/tvShowTypes"
 
 export default function TvShow() {
-  const tvShowId: string = "92743"
+  const router = useRouter()
+  const tvShowId: string = router.query.tvshowid as string
 
   const { data: tvShows, isLoading } = useQuery(["tvShow", tvShowId], () =>
     fetchTvShowById(tvShowId)
